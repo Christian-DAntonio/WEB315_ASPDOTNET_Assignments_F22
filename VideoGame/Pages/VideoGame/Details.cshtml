@@ -1,0 +1,49 @@
+@page
+@model VideoGame.Pages_VideoGame.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>VideoGame</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.VideoGame.Game)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.VideoGame.Game)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.VideoGame.ReleaseDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.VideoGame.ReleaseDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.VideoGame.Genre)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.VideoGame.Genre)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.VideoGame.Company)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.VideoGame.Company)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.VideoGame.ReviewScore)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.VideoGame.ReviewScore)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.VideoGame?.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
